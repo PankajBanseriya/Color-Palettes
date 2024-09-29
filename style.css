@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+body {
+    background: #cde6f8;
+}
+
+h1 {
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    text-decoration: underline #01fa79;
+    background: -webkit-linear-gradient(left,#13fc69, #b5f787);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+
+.wrapper .color {
+    background: #fff;
+    list-style: none;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wrapper .color:active {
+    transform: scale(0.95);
+}
+
+.color .box {
+    width: 185px;
+    height: 188px;
+    background: linear-gradient(-45deg, aqua, purple);
+}
+
+.color .hex-value {
+    font-size: 1.15rem;
+    font-weight: 500;
+    display: block;
+    margin: 12px 0 8px;
+    color: #000000;
+}
+
+.color:hover .box {
+    filter: brightness(106%);
+}
+
+.refresh_btn {
+    outline: none;
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border-radius: 20px;
+    background: #ee0c64;
+}
+
+.refresh_btn:hover {
+    transition: all 0.3s;
+    box-shadow: 0px 0 10px #ee0c64;
+}
+
+.messageBox {
+    position: absolute;
+    font-weight: 600;
+    right: 1rem;
+    top: 1rem;
+    color: #01fa79;
+    background: #000000;
+    padding: 0.5rem;
+    display: none;
+}
+
+.messageBox.active {
+    display: block;
+}
+
+@media screen and (max-width: 510px) {
+    h1{
+        font-size: 30px;
+    }
+    .wrapper {
+        margin: 10px;
+    }
+
+    .wrapper .color {
+        margin: 8px;
+        padding: 5px;
+    }
+
+    .color .box {
+        width: 145px;
+        height: 148px;
+    }
+
+    .color .hex-value {
+        font-size: 1.05rem;
+    }
+}
